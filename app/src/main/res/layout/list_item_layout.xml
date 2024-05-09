@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_item_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="1dp">
+
+    <com.daimajia.swipe.SwipeLayout
+        android:id="@+id/swipe_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="2dp">
+        <!-- Bottom View Start-->
+        <LinearLayout
+            android:id="@+id/bottom"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--What you want to show-->
+            <Button
+                android:id="@+id/button_delet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/pink"
+                android:text="删除" />
+        </LinearLayout>
+        <!-- Bottom View End-->
+
+        <!-- Surface View Start -->
+        <RelativeLayout
+            android:id="@+id/surface"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_toLeftOf="@id/tv_time"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:maxLines="1"
+                android:text="你好"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="1dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="我是测试内容"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_title"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="2020-1-1 00:00:00"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <!-- Surface View End -->
+    </com.daimajia.swipe.SwipeLayout>
+
+</RelativeLayout>
