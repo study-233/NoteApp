@@ -37,10 +37,13 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-
+    //提示组件
     compile 'com.github.cazaea:sweet-alert-dialog:1.0.0'
-
+    //滑动组件
     compile 'com.android.support:recyclerview-v7:28.0.0'
     compile 'com.android.support:support-v4:20.+'
     compile "com.daimajia.swipelayout:library:1.2.0@aar"
+    //刷新组件
+    compile 'com.yalantis:phoenix:1.2.3'
+
 }
