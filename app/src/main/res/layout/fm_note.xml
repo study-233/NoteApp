@@ -21,14 +21,12 @@
     </com.yalantis.phoenix.PullToRefreshView>
 
 
-    <androidx.appcompat.widget.AppCompatButton
-        style="@style/MyBtnStyle"
-        android:id="@+id/addButton"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="right|bottom"
         android:layout_margin="20dp"
-        android:contentDescription="TODO"
+        android:id="@+id/addNote"
         android:src="@android:drawable/ic_input_add"
         tools:ignore="UsingOnClickInXml" />
 

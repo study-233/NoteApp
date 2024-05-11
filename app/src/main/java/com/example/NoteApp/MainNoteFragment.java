@@ -25,6 +25,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.NoteApp.adapter.MyAdapter;
 import com.example.NoteApp.bean.Note;
 import com.example.NoteApp.util.SpfUtil;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.yalantis.phoenix.PullToRefreshView;
 
 import java.util.ArrayList;
@@ -62,7 +63,7 @@ public class MainNoteFragment extends Fragment {
         mRecyclerView = view.findViewById(R.id.rlv);
 
         // button click event
-        Button addButton = view.findViewById(R.id.addButton);
+        FloatingActionButton addButton = view.findViewById(R.id.addNote);
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
