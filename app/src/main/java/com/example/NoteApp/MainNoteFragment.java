@@ -143,16 +143,20 @@ public class MainNoteFragment extends Fragment {
         return mNoteDbOpenHelper.queryAllFromDb();
     }
 
-
+    boolean no_divider = true;
     @SuppressLint("NotifyDataSetChanged")
     private void setToLinearList() {
         RecyclerView.LayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         mRecyclerView.setLayoutManager(linearLayoutManager);
 
         //分割线
-        DividerItemDecoration divider = new DividerItemDecoration(getActivity(),DividerItemDecoration.VERTICAL);
-        divider.setDrawable(Objects.requireNonNull(ContextCompat.getDrawable(getActivity(), R.drawable.custom_divider)));
-        mRecyclerView.addItemDecoration(divider);
+        if(no_divider){
+            DividerItemDecoration divider = new DividerItemDecoration(getActivity(),DividerItemDecoration.VERTICAL);
+            divider.setDrawable(Objects.requireNonNull(ContextCompat.getDrawable(getActivity(), R.drawable.custom_divider)));
+            mRecyclerView.addItemDecoration(divider);
+            no_divider = false ;
+        }
+
 
         mMyAdapter.setViewType(MyAdapter.TYPE_LINEAR_LAYOUT);
         mMyAdapter.notifyDataSetChanged();
