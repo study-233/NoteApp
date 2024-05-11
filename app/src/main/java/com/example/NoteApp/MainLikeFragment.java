@@ -11,6 +11,12 @@ import androidx.fragment.app.Fragment;
 
 public class MainLikeFragment extends Fragment {
 
+
+    public static Fragment newInstance() {
+        return new MainLikeFragment();
+    }
+
+
     @Nullable
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fm_like,container, false);
