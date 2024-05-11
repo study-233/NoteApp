@@ -22,7 +22,7 @@
         <activity
             android:name="com.example.NoteApp.MainActivity"
             android:exported="true"
-            android:label="记事列表">
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
